@@ -276,7 +276,7 @@ function Navbar({ active }) {
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
       padding: "1rem 2rem",
-      background: scrolled ? "rgba(4,4,16,0.85)" : "transparent",
+      background: scrolled ? "rgba(0,0,0,0.85)" : "transparent",
       backdropFilter: scrolled ? "blur(20px)" : "none",
       borderBottom: scrolled ? "1px solid rgba(139,92,246,0.15)" : "none",
       transition: "all 0.3s",
@@ -328,7 +328,7 @@ function Navbar({ active }) {
       {open && (
         <div style={{
           position: "fixed", top: "60px", left: 0, right: 0, bottom: 0,
-          background: "rgba(4,4,16,0.97)", display: "flex", flexDirection: "column",
+          background: "rgba(0,0,0,0.97)", display: "flex", flexDirection: "column",
           alignItems: "center", justifyContent: "center", gap: "2rem", zIndex: 99,
         }}>
           {links.map(l => (
@@ -986,9 +986,9 @@ export default function App() {
       <style>{`
         *, *::before, *::after { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { margin: 0; background: #040410; color: #fff; overflow-x: hidden; }
+        body { margin: 0; background: #000000; color: #fff; overflow-x: hidden; }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #040410; }
+        ::-webkit-scrollbar-track { background: #000000; }
         ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 2px; }
         input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3); }
         textarea { font-family: inherit; }
