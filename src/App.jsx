@@ -378,20 +378,7 @@ function Hero() {
   return (
     <section id="home" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "8rem 2rem 6rem", position: "relative", zIndex: 1 }}>
       <div style={{ textAlign: "center", maxWidth: "800px" }}>
-        {/* Standing Mascot */}
-        <div style={{ marginBottom: "2rem", animation: "fadeSlideUp 0.6s ease forwards" }}>
-          <div style={{
-            position: "relative", height: "300px", margin: "0 auto",
-            animation: "floatMascot 4s ease-in-out infinite alternate", zIndex: 10
-          }}>
-            <img src="/mascot_standing.png" alt="Neon Mascot" style={{ 
-              height: "100%", objectFit: "contain", mixBlendMode: "screen", 
-              filter: "drop-shadow(0 0 15px rgba(0,243,255,0.3))",
-              WebkitMaskImage: "radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%)",
-              maskImage: "radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%)"
-            }} />
-          </div>
-        </div>
+        {/* ...mascot removed... */}
 
         {/* Greeting badge */}
         <div style={{
@@ -824,20 +811,8 @@ function Contact() {
         opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)",
         transition: "all 0.7s ease",
       }}>
-        {/* Left Side: Mascot & Links */}
+        {/* Left Side: Links only, mascot removed */}
         <div style={{ display: "flex", flexDirection: "column", gap: "2rem", alignItems: "center" }}>
-          <div style={{
-            position: "relative", height: "300px",
-            animation: "floatMascot 4s ease-in-out infinite alternate"
-          }}>
-            <img src="/mascot_standing.png" alt="Neon Mascot" style={{ 
-              height: "100%", objectFit: "contain", mixBlendMode: "screen", 
-              filter: `drop-shadow(0 0 20px ${neonPink}50)`,
-              WebkitMaskImage: "radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%)",
-              maskImage: "radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%)"
-            }} />
-          </div>
-          
           <div style={{ width: "100%" }}>
             <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1.3rem", color: "#fff", marginBottom: "1.5rem", textAlign: "center" }}>Reach me anywhere</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
@@ -845,8 +820,8 @@ function Contact() {
                 { label: "LinkedIn", value: "machani-yaswitha", href: SOCIAL.linkedin, color: neonCyan, icon: "🔗" },
                 { label: "GitHub", value: "YaswithaMachani", href: SOCIAL.github, color: neonPink, icon: "💻" },
                 { label: "LeetCode", value: "Yashwitha_100", href: SOCIAL.leetcode, color: neonCyan, icon: "🏆" },
-                { label: "Email", value: SOCIAL.email, href: `mailto:${SOCIAL.email}`, color: neonPink, icon: "✉️" },
-                { label: "Phone", value: SOCIAL.phone, href: `tel:${SOCIAL.phone}`, color: neonCyan, icon: "📱" },
+                { label: "Email", value: SOCIAL.email, href: `mailto:${SOCIAL.email}", color: neonPink, icon: "✉️" },
+                { label: "Phone", value: SOCIAL.phone, href: `tel:${SOCIAL.phone}", color: neonCyan, icon: "📱" },
               ].map(l => (
                 <a key={l.label} href={l.href} target="_blank" rel="noreferrer" style={{
                   display: "flex", alignItems: "center", justifyContent: "space-between",
