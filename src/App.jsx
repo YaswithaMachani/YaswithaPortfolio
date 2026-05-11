@@ -352,7 +352,7 @@ function Navbar({ active }) {
 ───────────────────────────────────────────── */
 function Hero() {
   const [typed, setTyped] = useState("");
-  const roles = ["AI Engineer", "Full-Stack Developer", "ML Researcher", "Vision AI Builder"];
+  const roles = ["AI Engineer", "Full-Stack Developer", "ML Researcher"];
   const roleIdx = useRef(0);
   const charIdx = useRef(0);
   const deleting = useRef(false);
@@ -516,31 +516,14 @@ function Hero() {
 function About() {
   const [ref, inView] = useInView();
   return (
-    <section id="about" ref={ref} style={{ padding: "6rem 2rem", position: "relative", zIndex: 1, maxWidth: "1100px", margin: "0 auto" }}>
+    <section id="about" ref={ref} style={{ padding: "3rem 2rem 1.5rem", position: "relative", zIndex: 1, maxWidth: "600px", margin: "0 auto" }}>
       <SectionLabel label="About Me" />
-      <h2 style={headingStyle}>Who I Am</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginTop: "3rem" }}>
-        <div style={{ ...glassCard, opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease" }}>
-          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>👩‍💻</div>
-          <h3 style={cardHeading}>The Visionary Engineer</h3>
-          <p style={cardText}>
-            Hi, I’m Yaswitha — a creative technologist, AI enthusiast, and full-stack developer. I thrive on building intelligent products that blend beautiful interfaces with powerful machine learning. My journey is about more than code: it’s about curiosity, empathy, and making tech that matters.
-          </p>
-        </div>
-        <div style={{ ...glassCard, opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease 0.15s" }}>
-          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🧠</div>
-          <h3 style={cardHeading}>The AI Explorer</h3>
-          <p style={cardText}>
-            From Vision Transformers that read emotions to LLM-powered chatbots for farmers, I love solving real-world problems with cutting-edge AI. I believe in research with impact and code with purpose.
-          </p>
-        </div>
-        <div style={{ ...glassCard, opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(40px)", transition: "all 0.7s ease 0.3s" }}>
-          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🚀</div>
-          <h3 style={cardHeading}>The Relentless Achiever</h3>
-          <p style={cardText}>
-            Awarded at NGIT’s GenAI ProjectSchool, certified in full-stack and data science, and always pushing boundaries — from perfect SSC scores to building award-winning AI projects. I’m here to learn, lead, and leave a mark.
-          </p>
-        </div>
+      <div style={{ ...glassCard, opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(20px)", transition: "all 0.7s ease", textAlign: "center" }}>
+        <h2 style={{ ...headingStyle, fontSize: "1.5rem", margin: 0 }}>Hi, I’m Yaswitha</h2>
+        <p style={{ ...cardText, marginTop: "1rem" }}>
+          AI enthusiast & full-stack developer.<br />
+          Always learning, always curious.
+        </p>
       </div>
     </section>
   );
@@ -947,7 +930,7 @@ function Footer() {
         ))}
       </div>
       <p style={{ color: "rgba(255,255,255,0.25)", fontFamily: "'DM Mono', monospace", fontSize: "0.75rem" }}>
-        © 2024 Yaswitha Machani · Built with ♥ in React
+        © 2026 Yaswitha Machani · Built with ♥ in React
       </p>
       {/* Scroll to top */}
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{
