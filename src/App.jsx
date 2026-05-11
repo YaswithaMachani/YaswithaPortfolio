@@ -820,8 +820,8 @@ function Contact() {
                 { label: "LinkedIn", value: "machani-yaswitha", href: SOCIAL.linkedin, color: neonCyan, icon: "🔗" },
                 { label: "GitHub", value: "YaswithaMachani", href: SOCIAL.github, color: neonPink, icon: "💻" },
                 { label: "LeetCode", value: "Yashwitha_100", href: SOCIAL.leetcode, color: neonCyan, icon: "🏆" },
-                { label: "Email", value: SOCIAL.email, href: `mailto:${SOCIAL.email}", color: neonPink, icon: "✉️" },
-                { label: "Phone", value: SOCIAL.phone, href: `tel:${SOCIAL.phone}", color: neonCyan, icon: "📱" },
+                { label: "Email", value: SOCIAL.email, href: `mailto:${SOCIAL.email}`, color: neonPink, icon: "✉️" },
+                { label: "Phone", value: SOCIAL.phone, href: `tel:${SOCIAL.phone}`, color: neonCyan, icon: "📱" },
               ].map(l => (
                 <a key={l.label} href={l.href} target="_blank" rel="noreferrer" style={{
                   display: "flex", alignItems: "center", justifyContent: "space-between",
